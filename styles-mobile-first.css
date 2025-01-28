@@ -1,0 +1,57 @@
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    background-color: lightgreen;
+}
+
+main {
+    max-width: 100vh;
+    margin: 0 auto;
+    background-color: lightgoldenrodyellow;
+    
+    display: grid;
+    gap: 30px;
+    align-items: start;
+    padding:25px 0;
+}
+
+footer {
+    background-color: lightcoral;
+}
+
+header, footer {
+    padding: 25px;
+}
+
+.card {
+    background-color: aliceblue;
+    border: 2px solid lightcyan;
+    padding: 20px;
+    box-shadow: 0 3px 3px;
+}
+
+
+@media screen and (width > 600px){
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card :last-child{
+        grid-column: span 2;
+    }
+}
+
+
+@media screen and (width >= 900px){
+
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card :last-child{
+        grid-column: span 1;
+    }
+}
